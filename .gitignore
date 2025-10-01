@@ -1,0 +1,6 @@
+# Ignore compiled binaries and editor files
+replace
+teststr
+*.o
+.DS_Store
+__pycache__/
