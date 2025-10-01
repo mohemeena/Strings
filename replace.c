@@ -1,6 +1,6 @@
 /*--------------------------------------------------------------------*/
 /* replace.c                                                          */
-/* Author: ???                                                        */
+/* Author: Mohemeen Ahmed                                                        */
 /*--------------------------------------------------------------------*/
 
 #include "str.h"
@@ -20,7 +20,31 @@
 static size_t replaceAndWrite(const char *pcLine,
                               const char *pcFrom, const char *pcTo)
 {
-   /* Insert your code here. */
+   const char *pcCur;
+    const char *pcHit;
+    size_t uFromLen;
+    size_t uCount = 0;
+
+    assert(pcLine != NULL);
+    assert(pcFrom != NULL);
+    assert(pcTo   != NULL);
+
+    if (pcFrom[0] == '\0') {        /* echo unchanged */
+        fputs(pcLine, stdout);
+        return 0;
+    }
+
+    uFromLen = Str_getLength(pcFrom);
+    pcCur = pcLine;
+
+    while ((pcHit = Str_search(pcCur, pcFrom)) != NULL) {
+        fwrite(pcCur, 1, (size_t)(pcHit - pcCur), stdout);
+        fputs(pcTo, stdout);
+        uCount++;
+        pcCur = pcHit + uFromLen;   /* non-overlapping */
+    }
+    fputs(pcCur, stdout);           /* tail */
+    return uCount;
 }
 
 /*--------------------------------------------------------------------*/
@@ -55,8 +79,9 @@ int main(int argc, char *argv[])
    pcFrom = argv[1];
    pcTo = argv[2];
 
-   while (fgets(acLine, MAX_LINE_SIZE, stdin) != NULL)
-      /* Insert your code here. */
+   while (fgets(acLine, MAX_LINE_SIZE, stdin) != NULL){
+      uReplaceCount += replaceAndWrite(acLine, pcFrom, pcTo); //replace and write each line
+   }
 
    fprintf(stderr, "%lu replacements\n", (unsigned long)uReplaceCount);
    return 0;
