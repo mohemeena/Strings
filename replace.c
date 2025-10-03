@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
    pcTo = argv[2];
 
    while (fgets(acLine, MAX_LINE_SIZE, stdin) != NULL){
-      uReplaceCount += replaceAndWrite(acLine, pcFrom, pcTo); //replace and write each line
+      uReplaceCount += replaceAndWrite(acLine, pcFrom, pcTo); /* replace and write each line */
    }
 
    fprintf(stderr, "%lu replacements\n", (unsigned long)uReplaceCount);
