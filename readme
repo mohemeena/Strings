@@ -3,7 +3,7 @@ Assignment 2 readme File
 ------------------------------------------------------------------------
 What is your name?
 
-
+Mohemeen Ahmed
 
 ------------------------------------------------------------------------
 What authorized sources of information did you use to complete the
@@ -12,7 +12,7 @@ in the "Policies" web page (also available on armlab in the file
 ~cos217/AuthorizedSourcesList ) to this section of the readme file,
 and edit it as appropriate.
 
-
+fill out
 
 ------------------------------------------------------------------------
 What unauthorized sources of information did you use to complete the
@@ -36,7 +36,7 @@ enter your name in the space below the following affirmation:
 This paper represents my own work in accordance with University
 regulations.
 
-
+Mohemeen Ahmed
 
 ------------------------------------------------------------------------
 In fulfillment of the requirement from section 2.4.6 of the Academic
@@ -49,7 +49,7 @@ used AI in completing this assignment:
 ------------------------------------------------------------------------
 What is your assessment of the assignment? Was it helpful? Was it fun?
 
-
+Yes!
 
 ------------------------------------------------------------------------
 (optional) What information can you provide about your submission that
@@ -64,7 +64,13 @@ disagreements with them? Copy the splint warnings here, and express your
 disagreement after each warning. If there are no warnings, then write
 "None."
 
+Splint 3.1.2 --- 20 Aug 2022
 
+stra.c: (in function Str_compare)
+stra.c:49:13: Incompatible types for == (unsigned char, char): c1 == '\0'
+  Types are incompatible. (Use -type to inhibit warning)
+
+Finished checking --- 1 code warning
 
 ------------------------------------------------------------------------
 What warnings does critTer generate on stra.c, and what are your
@@ -72,7 +78,7 @@ disagreements with them? Copy the critTer warnings here, and express
 your disagreement after each warning. If there are no warnings, then
 write "None."
 
-
+None
 
 ------------------------------------------------------------------------
 What warnings does splint generate on strp.c, and what are your
