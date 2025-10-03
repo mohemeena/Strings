@@ -96,7 +96,7 @@ char *Str_concat(char *pcDest, const char *pcSrc);
 /*                                                                    */
 /* Effects:  None (reads only).                                        */
 /*                                                                    */
-/* Returns:                                                            */
+//* Returns:                                                            */
 /*   < 0  if pcS1 is lexicographically less than pcS2;                 */
 /*   = 0  if pcS1 and pcS2 are equal;                                  */
 /*   > 0  if pcS1 is lexicographically greater than pcS2.              */
